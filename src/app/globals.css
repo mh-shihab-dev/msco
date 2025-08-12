@@ -15,3 +15,14 @@ body {
   font-family: var(--font-playfair);
   color: #111827; /* text-gray-900 */
 }
+
+
+.section-subtitle{
+  @apply text-[#b68c5a] text-xl font-medium
+}
+
+
+
+.input-style{
+  @apply box-border p-3  border border-white/40 rounded-md backdrop-blur-[10px] bg-[radial-gradient(243%_43%_at_79%_50%,rgba(0,61,64,0.5),rgba(1,28,26,0.5)_100%)] text-white placeholder-[#ffffffbd] font-inter text-xs focus:outline-none focus:border-white
+}

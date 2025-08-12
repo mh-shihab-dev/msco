@@ -1,7 +1,12 @@
+import About from "@/components/home/About"
+import Hero from "@/components/home/Hero"
 
 const HomePage = () => {
   return (
-    <div className="text-red-500 font-heading">HomePage</div>
+    <div>
+      <Hero/>
+      <About/>
+    </div>
   )
 }
 
