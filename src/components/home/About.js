@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { PrimaryDarkBtn,  } from "../shared/Button";
 import { assets } from "@/assets/assets";
+import Achivement from "./Achivement";
 
 const About = () => {
   return (
@@ -46,6 +47,7 @@ const About = () => {
           <PrimaryDarkBtn/>
         </div>
       </div>
+      <Achivement/>
     </section>
   );
 };
