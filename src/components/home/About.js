@@ -5,8 +5,8 @@ import Achivement from "./Achivement";
 
 const About = () => {
   return (
-    <section className="mt-26">
-      <div className="w-[90%] max-w-[1300px] mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section className="section">
+      <div className="grid md:grid-cols-2 gap-12 items-center">
         {/* Left Side - Images */}
         <div className="grid grid-cols-2 gap-5">
           {/* Left Big Image */}
@@ -44,7 +44,7 @@ const About = () => {
             with real-world insight to help clients succeed in an ever-evolving
             business environment.
           </p>
-          <PrimaryDarkBtn/>
+          <PrimaryDarkBtn text={"Book Consultation"}/>
         </div>
       </div>
       <Achivement/>

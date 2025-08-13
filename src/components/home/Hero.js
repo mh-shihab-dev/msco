@@ -9,14 +9,14 @@ const Hero = () => {
     >
       <div className="w-[90%] max-w-[1300px] mx-auto flex flex-col md:flex-row gap-8 items-center justify-between text-white">
         <div className="max-w-[503px] text-center md:text-left">
-          <h2 className="text-[3.1rem] font-normal mb-8">
+          <h2 className="text-[3.1rem] font-semibold mb-8">
             Your Partner in Tax and Accountancy
           </h2>
           <p className="font-inter text-lg mb-9">
             Serving 10,000+ Clients Across 50+ Nationalities with Proven Tax &
             Business Advisory.
           </p>
-          <PrimaryLightBtn />
+          <PrimaryLightBtn text={"Book Consultation"} />
         </div>
         <div
           className="p-6 
@@ -64,6 +64,7 @@ const Hero = () => {
               placeholder="Your message (Optional)"
               rows="3"
               className="w-full input-style"
+              readOnly
             ></textarea>
 
             {/* Submit */}

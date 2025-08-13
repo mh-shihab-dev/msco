@@ -1,4 +1,5 @@
-export const PrimaryDarkBtn = () => {
+"use client"
+export const PrimaryDarkBtn = ({text}) => {
   return (
     <button
       className="py-3 px-10 relative inline-flex items-center overflow-hidden font-medium font-inter 
@@ -34,14 +35,15 @@ export const PrimaryDarkBtn = () => {
 
       {/* Button text */}
       <span className="relative group-hover:text-white">
-        Book Consultation
+        {text}
       </span>
     </button>
   );
 };
 
 
-export const PrimaryLightBtn = () => {
+export const PrimaryLightBtn = ({text}) => {
+  console.log(text)
   return (
     <button
       className="py-3 px-10 relative inline-flex items-center overflow-hidden font-medium font-inter 
@@ -77,7 +79,7 @@ export const PrimaryLightBtn = () => {
 
       {/* Button text */}
       <span className="relative group-hover:text-[#b68c5a]">
-        Book Consultation
+        {text}
       </span>
     </button>
   );
