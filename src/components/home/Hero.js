@@ -1,4 +1,7 @@
+'use client'
 import { PrimaryLightBtn } from "../shared/Button";
+import { motion } from "framer-motion";
+
 
 
 const Hero = () => {
@@ -8,19 +11,27 @@ const Hero = () => {
                  bg-[url('https://i.postimg.cc/q7PJRX3L/hero.png')]"
     >
       <div className="w-[90%] max-w-[1300px] mx-auto flex flex-col md:flex-row gap-8 items-center justify-between text-white">
-        <div className="max-w-[503px] text-center md:text-left">
-          <h2 className="text-[3.1rem] font-semibold mb-8">
-            Your Partner in Tax and Accountancy
-          </h2>
-          <p className="font-inter text-lg mb-9">
-            Serving 10,000+ Clients Across 50+ Nationalities with Proven Tax &
-            Business Advisory.
-          </p>
-          <PrimaryLightBtn text={"Book Consultation"} />
-        </div>
-        <div
-          className="p-6 
-        box-border border border-white/30 rounded-[10px] backdrop-blur-[10px] bg-[rgba(42,76,74,0.3)] "
+         <motion.div
+      initial={{ opacity: 0, y: 80 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      transition={{ duration: 1, ease: "easeOut" }} 
+      viewport={{ once: true }} // Animate only once
+      className="max-w-[503px] text-center md:text-left"
+    >
+      <h2 className="text-[3.1rem] font-semibold mb-8">
+        Your Partner in Tax and Accountancy
+      </h2>
+      <p className="font-inter text-lg mb-9">
+        Serving 10,000+ Clients Across 50+ Nationalities with Proven Tax & Business Advisory.
+      </p>
+      <PrimaryLightBtn text={"Book Consultation"} />
+    </motion.div>
+        <motion.div
+          className="p-6 box-border border border-white/30 rounded-[10px] backdrop-blur-[10px] bg-[rgba(42,76,74,0.3)] "
+           initial={{ opacity: 0, y: -60 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      transition={{ duration: 1, ease: "easeOut" }}
+      viewport={{ once: true }}
         >
           <h2 className="text-white text-xl font-normal mb-4">
             Request a call Back
@@ -63,7 +74,7 @@ const Hero = () => {
             <textarea
               placeholder="Your message (Optional)"
               rows="3"
-              className="w-full input-style"
+              className="w-full input-style resize-none"
               readOnly
             ></textarea>
 
@@ -84,7 +95,7 @@ const Hero = () => {
               <span className="relative group-hover:text-white">Submit</span>
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

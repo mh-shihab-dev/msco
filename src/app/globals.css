@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 
 :root {
   --background: #ffffff;
@@ -13,7 +15,8 @@
 /* Default body font */
 body {
   font-family: var(--font-playfair);
-  color: #111827; /* text-gray-900 */
+  overflow-x: hidden;
+  background-color: #ffffff;
 }
 
 

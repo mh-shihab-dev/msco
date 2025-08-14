@@ -20,6 +20,13 @@ import payrollDark from "../../public/images/icons/payroll-dark.svg"
 import payrollLight from "../../public/images/icons/payroll-light.svg"
 import vatDark from "../../public/images/icons/vat-dark.svg"
 import vatLight from "../../public/images/icons/vat-light.svg"
+import leader from "../../public/images/icons/features/leader.svg"
+import relation from "../../public/images/icons/features/relation.svg"
+import reach from "../../public/images/icons/features/reach.svg"
+import clarification from "../../public/images/icons/features/clarification.svg"
+import approach from "../../public/images/icons/features/approach.svg"
+import quoteDark from "../../public/images/icons/quote-dark.svg"
+import quoteLight from "../../public/images/icons/quote-light.svg"
 
 
 
@@ -49,5 +56,12 @@ export const icons = {
     payrollDark,
     payrollLight,
     vatDark,
-    vatLight
+    vatLight,
+    leader,
+    relation,
+    reach,
+    clarification,
+    approach,
+    quoteDark,
+    quoteLight
 };
