@@ -11,33 +11,36 @@ import "slick-carousel/slick/slick-theme.css";
 export default function TestimonialS() {
   const sliderRef = useRef(null);
 
- const testimonials = [
-  {
-    name: "William Hazelip",
-    role: "Barristers",
-    img: assets.clinet1,
-    text: "I was struggling with family law for months before I found abc. They not only provided me with the solution I needed, but they also educated me on how to prevent the issue from happening again. Their team is incredibly knowledgeable and patient, and they always go the extra mile to ensure customer satisfaction. I am so grateful for their help and would recommend them to anyone.",
-  },
-  {
-    name: "Monica D’suza",
-    role: "Solicitors",
-    img: assets.clinet2,
-    text: "I was struggling with family law for months before I found abc. They not only provided me with the solution I needed, but they also educated me on how to prevent the issue from happening again. Their team is incredibly knowledgeable and patient, and they always go the extra mile to ensure customer satisfaction. I am so grateful for their help and would recommend them to anyone.",
-  },
-  {
-    name: "Jasica Doe",
-    role: "Law Firm",
-    img: assets.client3,
-    text: "I was struggling with family law for months before I found abc. They not only provided me with the solution I needed, but they also educated me on how to prevent the issue from happening again. Their team is incredibly knowledgeable and patient, and they always go the extra mile to ensure customer satisfaction. I am so grateful for their help and would recommend them to anyone.",
-  },
-];
-
+  const testimonials = [
+    {
+      name: "William Hazelip",
+      role: "Barristers",
+      img: assets.clinet1,
+      text: "I was struggling with family law for months before I found abc. They not only provided me with the solution I needed, but they also educated me on how to prevent the issue from happening again. Their team is incredibly knowledgeable and patient, and they always go the extra mile to ensure customer satisfaction. I am so grateful for their help and would recommend them to anyone.",
+    },
+    {
+      name: "Monica D’suza",
+      role: "Solicitors",
+      img: assets.clinet2,
+      text: "I was struggling with family law for months before I found abc. They not only provided me with the solution I needed, but they also educated me on how to prevent the issue from happening again. Their team is incredibly knowledgeable and patient, and they always go the extra mile to ensure customer satisfaction. I am so grateful for their help and would recommend them to anyone.",
+    },
+    {
+      name: "Jasica Doe",
+      role: "Law Firm",
+      img: assets.client3,
+      text: "I was struggling with family law for months before I found abc. They not only provided me with the solution I needed, but they also educated me on how to prevent the issue from happening again. Their team is incredibly knowledgeable and patient, and they always go the extra mile to ensure customer satisfaction. I am so grateful for their help and would recommend them to anyone.",
+    },
+  ];
 
   const settings = {
     infinite: true,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: false,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
       { breakpoint: 750, settings: { slidesToShow: 1 } },
@@ -54,11 +57,15 @@ export default function TestimonialS() {
 
   const cardVariants = {
     hidden: { opacity: 0, y: 60 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, ease: "easeOut" },
+    },
   };
 
   return (
-    <section className="section mx-auto py-10 relative my-20">
+    <section className="section mx-auto py-10 relative ">
       <motion.div
         className="mb-11 text-center"
         initial={{ opacity: 0, y: -30 }}
@@ -80,7 +87,11 @@ export default function TestimonialS() {
           {testimonials.map((item, i) => (
             <motion.div key={i} className="px-3" variants={cardVariants}>
               <motion.div
-                className="rounded-xl p-8 border border-gray-200 border-b-8 border-b-[#b68c5a] shadow-lg bg-white py-10 relative overflow-hidden group"
+                className=" p-8  py-10 box-border
+  border-b-[5.4734735489px] border-b-[rgba(182,140,90,1)]
+  rounded-[23.65px_49.26px_23.65px_23.65px]
+  shadow-[0px_3.9408977032px_19.7044887543px_0px_rgba(0,0,0,0.06)]
+  bg-[rgba(255,255,255,1)] relative overflow-hidden group"
                 whileHover={{ scale: 1.03 }}
                 transition={{ type: "spring", stiffness: 200, damping: 15 }}
               >
@@ -140,8 +151,18 @@ export default function TestimonialS() {
           className="custom-prev relative overflow-hidden group bg-[#b98a57] text-white w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out cursor-pointer"
         >
           <span className="absolute left-0 block w-full h-0 transition-all bg-[#011c1a] opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-500 ease"></span>
-          <svg className="w-5 h-5 z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+          <svg
+            className="w-5 h-5 z-10"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            ></path>
           </svg>
         </button>
         <button
@@ -149,8 +170,18 @@ export default function TestimonialS() {
           className="custom-next relative overflow-hidden group bg-[#b98a57] text-white w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out cursor-pointer"
         >
           <span className="absolute left-0 block w-full h-0 transition-all bg-[#011c1a] opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-500 ease"></span>
-          <svg className="w-5 h-5 z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          <svg
+            className="w-5 h-5 z-10"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            ></path>
           </svg>
         </button>
       </div>

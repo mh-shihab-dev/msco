@@ -16,7 +16,7 @@ const HomePage = () => {
       <Industries />
       <Features />
       <Testimonials/>
-      {/* <Contact/> */}
+      <Contact/>
     </div>
   );
 };

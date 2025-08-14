@@ -1,114 +1,167 @@
+"use client";
+import Image from "next/image";
+import { assets } from "@/assets/assets";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+export const contactInfo = [
+  {
+    icon: assets.location,
+    title: "Location",
+    text1: "Bank House, 209 Merton Road, London, SW19 1EE",
+    text2: "Suda House,100 Mile End Road, London, E1 4UN",
+  },
+  {
+    icon: assets.phone,
+    title: "Phone",
+    text1: "0208 543 9128",
+    text2: "0207 790 0793",
+  },
+  {
+    icon: assets.mail,
+    title: "Email",
+    text1: "info@msaccountants.co.uk",
+  },
+];
 const Contact = () => {
   return (
-    <section className="section">
-      <div>
-        {/* left */}
-        <div className="bg-[#264646] p-8 rounded-2xl shadow-lg w-full max-w-md">
-        <h3 className="text-[#c39b6a] text-center text-sm mb-1">
-          Have Any Questions?
-        </h3>
-        <h2 className="text-white text-center text-2xl font-semibold mb-6">
-          Get in Touch with Us
-        </h2>
+    <section className="section mb-20 px-4 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        {/* Left: Contact Form */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          className="bg-[#264646] py-10 px-6 sm:px-8 lg:px-12 rounded-2xl shadow-lg w-full"
+        >
+          <h3 className="text-[rgba(182,140,90,1)] text-lg sm:text-xl text-center font-normal mb-4">
+            Have Any Questions?
+          </h3>
+          <h2 className="text-white text-center mb-6 text-xl sm:text-2xl font-normal">
+            Get in Touch with Us
+          </h2>
 
-        <form className="space-y-4">
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="w-full p-3 rounded-md bg-gray-50 focus:ring-2 focus:ring-[#c39b6a] outline-none"
-          />
+          <form className="space-y-4 font-inter">
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="w-full p-3 rounded-md bg-gray-50 focus:ring-2 focus:ring-[#c39b6a] outline-none"
+              required
+            />
 
-          <div className="flex gap-3">
+            <div className="flex flex-col sm:flex-row gap-3">
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="w-full sm:w-1/2 p-3 rounded-md bg-gray-50 focus:ring-2 focus:ring-[#c39b6a] outline-none"
+                required
+              />
+              <input
+                type="tel"
+                placeholder="Telephone"
+                className="w-full sm:w-1/2 p-3 rounded-md bg-gray-50 focus:ring-2 focus:ring-[#c39b6a] outline-none"
+                required
+              />
+            </div>
+
             <input
-              type="email"
-              placeholder="Your Email"
-              className="w-1/2 p-3 rounded-md bg-gray-50 focus:ring-2 focus:ring-[#c39b6a] outline-none"
+              type="text"
+              placeholder="Subject"
+              className="w-full p-3 rounded-md bg-gray-50 focus:ring-2 focus:ring-[#c39b6a] outline-none"
+              required
             />
-            <input
-              type="tel"
-              placeholder="Telephone"
-              className="w-1/2 p-3 rounded-md bg-gray-50 focus:ring-2 focus:ring-[#c39b6a] outline-none"
-            />
+
+            <textarea
+              placeholder="Your message (Optional)"
+              rows="4"
+              className="w-full p-3 rounded-md bg-gray-50 focus:ring-2 focus:ring-[#c39b6a] resize-none outline-none"
+            ></textarea>
+
+            <button
+              type="submit"
+              className="w-full py-3 px-10 relative inline-flex items-center justify-center overflow-hidden font-medium font-inter 
+             text-white bg-[#b68c5a] rounded-full 
+             group transition-all duration-300 ease-in-out cursor-pointer"
+            >
+              <span
+                className="absolute left-0 block w-full h-0 transition-all bg-white opacity-100 
+                   group-hover:h-full top-1/2 group-hover:top-0 duration-500 ease"
+              ></span>
+              <span className="relative group-hover:text-[#b68c5a]">
+                Submit
+              </span>
+            </button>
+          </form>
+        </motion.div>
+
+        {/* Right: Contact Details & Image */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ delay: 0.2 }}
+          className="space-y-6"
+        >
+          <div className="space-y-6">
+            {contactInfo.map((item, i) => (
+              <motion.div
+                key={i}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{ delay: i * 0.15 }}
+                className="flex items-center gap-4"
+              >
+                <div className="w-12 h-12 bg-[#264646] rounded-full flex items-center justify-center flex-shrink-0">
+                  <Image src={item.icon} width={18} alt={item.title} />
+                </div>
+                <div>
+                  <h4 className="text-[#b68c5a] text-lg sm:text-xl font-semibold">
+                    {item.title}
+                  </h4>
+                  <p className="max-w-[240px] text-[#868686] text-sm sm:text-base font-inter font-normal">
+                    {item.text1}
+                  </p>
+                  {item.text2 && (
+                    <p className="max-w-[240px] text-[#868686] text-sm sm:text-base font-inter font-normal">
+                      {item.text2}
+                    </p>
+                  )}
+                </div>
+              </motion.div>
+            ))}
           </div>
 
-          <input
-            type="text"
-            placeholder="Subject"
-            className="w-full p-3 rounded-md bg-gray-50 focus:ring-2 focus:ring-[#c39b6a] outline-none"
-          />
-
-          <textarea
-            placeholder="Your message (Optional)"
-            rows="4"
-            className="w-full p-3 rounded-md bg-gray-50 focus:ring-2 focus:ring-[#c39b6a] resize-none outline-none"
-          ></textarea>
-
-          <button
-            type="submit"
-            className="w-full bg-[#c39b6a] text-white py-3 rounded-full font-medium hover:bg-[#b08a5f] transition"
+          {/* Image Section */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ delay: 0.4 }}
+            className="relative w-full"
           >
-            Submit
-          </button>
-        </form>
-      </div>
-      {/* right */}
-       <div className="bg-gray-50 py-10 px-4">
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center bg-white rounded-xl shadow-md p-6">
-        
-        {/* Left: Contact Details */}
-        <div className="space-y-6">
-          {/* Location */}
-          <div>
-            <h3 className="text-[#c39b6a] font-semibold text-lg">Location</h3>
-            <div className="flex items-start gap-3 mt-2">
-              <div className="bg-[#264646] p-3 rounded-full">
-                {/* <MapPin className="text-white w-5 h-5" /> */}
-              </div>
-              <div className="text-gray-700 text-sm leading-relaxed">
-                <p>Bank House, 209 Merton Road, London, SW19 1EE</p>
-                <p>Suda House, 100 Mile End Road, London, E1 4UN</p>
-              </div>
+            <Image
+              src={assets.contactBg}
+              alt="bg-img"
+              className="w-full h-auto object-cover rounded-lg"
+            />
+            <div className="absolute -right-4 bottom-0 max-w-[42%] sm:max-w-[50%] md:max-w-[55%]">
+              <Image
+                src={assets.contactPerson}
+                alt="person-img"
+                className="w-full h-auto object-contain"
+              />
             </div>
-          </div>
-
-          {/* Phone */}
-          <div>
-            <h3 className="text-[#c39b6a] font-semibold text-lg">Phone</h3>
-            <div className="flex items-start gap-3 mt-2">
-              <div className="bg-[#264646] p-3 rounded-full">
-                {/* <Phone className="text-white w-5 h-5" /> */}
-              </div>
-              <div className="text-gray-700 text-sm">
-                <p>0208 543 9128</p>
-                <p>0207 790 0793</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Email */}
-          <div>
-            <h3 className="text-[#c39b6a] font-semibold text-lg">Email</h3>
-            <div className="flex items-start gap-3 mt-2">
-              <div className="bg-[#264646] p-3 rounded-full">
-                {/* <Mail className="text-white w-5 h-5" /> */}
-              </div>
-              <div className="text-gray-700 text-sm">
-                <p>info@msaccountants.co.uk</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Right: Image */}
-        <div className="flex justify-center md:justify-end">
-          <img
-            src="/contact-lady.png"
-            alt="Contact"
-            className="rounded-lg max-h-[320px] object-cover"
-          />
-        </div>
-      </div>
-    </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

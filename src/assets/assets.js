@@ -8,6 +8,9 @@ import feature from '../../public/images/home/feature.svg'
 import clinet1 from "../../public/images/client-1.png"
 import clinet2 from "../../public/images/client-2.png"
 import client3 from "../../public/images/client-3.webp"
+import contactBg from "../../public/images/home/contact-bg.png"
+import contactPerson from "../../public/images/home/contact-person.svg"
+
 
 
 
@@ -21,5 +24,7 @@ export const assets = {
     feature,
     clinet1,
     clinet2,
-    client3
+    client3,
+    contactBg,
+    contactPerson
 }
