@@ -69,8 +69,8 @@ const Features = () => {
                   )}
 
                   {/* Icon */}
-                  <span className="flex items-center justify-center w-9 h-9 bg-[#b68c5a] text-white rounded-full z-10">
-                    <Image src={feature.icon} alt="feature_icon" />
+                  <span className="flex items-center justify-center w-9 h-9 bg-[#b68c5a] text-white rounded-full z-10 group">
+                    <Image src={feature.icon} alt="feature_icon"  className="transition-transform duration-500 group-hover:scale-x-[-1]" />
                   </span>
 
                   {/* Text */}

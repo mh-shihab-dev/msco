@@ -12,6 +12,12 @@
   --font-inter: var(--font-inter), sans-serif;
 }
 
+/* globals.css */
+html, body {
+  overflow-x: hidden;
+}
+
+
 /* Default body font */
 body {
   font-family: var(--font-playfair);
@@ -19,6 +25,16 @@ body {
   background-color: #ffffff;
 }
 
+
+:root {
+  --primary: #011c1a;
+  --secondary: #b68c5a;
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+}
 
 .section{
   @apply w-[90%] max-w-[1300px] mx-auto mt-26

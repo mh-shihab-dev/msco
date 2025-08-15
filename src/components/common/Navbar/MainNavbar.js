@@ -31,7 +31,7 @@ export default function MainNavbar() {
               {/* Menu button */}
               <Link
                 href={"/"}
-                className="flex items-center gap-1 hover:text-[#b68c5a] transition-colors"
+                className="flex items-center gap-1 hover:text-secondary transition-colors"
               >
                 {item.name}
                 <svg
@@ -61,7 +61,7 @@ export default function MainNavbar() {
               >
                 {item.links.map((link, linkIdx) => (
                   <li key={linkIdx}>
-                    <a href="#" className="block px-4 py-2  hover:text-[#b68c5a] transition-colors">
+                    <a href="#" className="block px-4 py-2  hover:text-secondary transition-colors">
                       {link}
                     </a>
                   </li>

@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 
 const TopNavbar = () => {
-  return <div className="w-full py-4 px-12 bg-[#011c1a]  text-white">
+  return <div className="w-full py-4 px-12 bg-primary  text-white">
     <div className="flex items-center justify-between ">
          <div className="flex space-x-6">
           <span className="flex items-center gap-2 text-sm font-normal"> <Image src={assets.phone} alt="phone_icon"/> 0208 543 9126</span>

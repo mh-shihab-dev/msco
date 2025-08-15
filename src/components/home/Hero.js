@@ -18,10 +18,10 @@ const Hero = () => {
       viewport={{ once: true }} // Animate only once
       className="max-w-[503px] text-center md:text-left"
     >
-      <h2 className="text-[3.1rem] font-semibold mb-8">
+      <h2 className="text-[3.1rem] font-semibold mb-10">
         Your Partner in Tax and Accountancy
       </h2>
-      <p className="font-inter text-lg mb-9">
+      <p className="font-inter text-lg mb-11">
         Serving 10,000+ Clients Across 50+ Nationalities with Proven Tax & Business Advisory.
       </p>
       <PrimaryLightBtn text={"Book Consultation"} />

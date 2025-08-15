@@ -100,8 +100,8 @@ const Contact = () => {
                 transition={{ delay: i * 0.15 }}
                 className="flex items-center gap-4"
               >
-                <div className="w-12 h-12 bg-[#264646] rounded-full flex items-center justify-center flex-shrink-0">
-                  <Image src={item.icon} width={18} alt={item.title} />
+                <div className="w-12 h-12 bg-[#264646] rounded-full flex items-center justify-center flex-shrink-0 group">
+                  <Image src={item.icon} width={18} alt={item.title} className="transition-transform duration-500 group-hover:scale-x-[-1]" />
                 </div>
                 <div>
                   <h4 className="text-[#b68c5a] text-lg sm:text-xl font-semibold">

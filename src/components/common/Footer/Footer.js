@@ -5,7 +5,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="bg-[#011c1a] py-16">
-      <div className="w-[90%] max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[0.6fr_1fr_1.5fr_1.1fr] gap-10 relative">
+      <div className="w-[90%] max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[0.6fr_0.9fr_1.6fr_1.3fr] gap-10 relative">
         {/* Pages */}
         <div className="relative">
           <h3 className="font-semibold text-xl text-white mb-4">Pages</h3>
@@ -16,7 +16,7 @@ const Footer = () => {
             <li>Why Choose Us</li>
             <li>Contact</li>
           </ul>
-          <div className="hidden lg:block absolute top-0 right-0 w-px h-[85%] bg-[#264646]"></div>
+          <div className="hidden lg:block absolute top-0 right-0 w-px h-[75%] bg-[#264646]"></div>
         </div>
 
         {/* Our Services */}
@@ -36,11 +36,11 @@ const Footer = () => {
             <li>Tax Planning & Returns</li>
             <li>Inheritance Tax (IHT)</li>
           </ul>
-          <div className="hidden lg:block absolute top-0 -right-2 w-px h-[85%] bg-[#264646]"></div>
+          <div className="hidden lg:block absolute top-0 -right-2 w-px h-[75%] bg-[#264646]"></div>
         </div>
 
         {/* Logo & Description */}
-        <div className="relative px-4 text-left md:text-center space-y-[22px]">
+        <div className="relative text-left md:text-center space-y-[22px]">
           <Image
             src={assets.mscoLight}
             alt="msco-logo"
@@ -117,7 +117,7 @@ const Footer = () => {
               />
             </a>
           </div>
-          <div className="hidden lg:block absolute top-0 -right-3 w-px h-[85%] bg-[#264646]"></div>
+          <div className="hidden lg:block absolute top-0 -right-5 w-px h-[75%] bg-[#264646]"></div>
         </div>
 
         {/* Location & Contact */}
@@ -134,14 +134,14 @@ const Footer = () => {
                   />
                 </div>
                 <div className="space-y-2">
-                  <h4 className="text-white text-lg sm:text-xl font-semibold">
+                  <h4 className="text-white text-lg sm:text-xl font-bold">
                     {item.title}
                   </h4>
-                  <p className="max-w-[240px] text-[#868686] text-sm sm:text-base font-inter font-normal">
+                  <p className="max-w-[240px] text-[#868686] text-sm  font-inter font-normal">
                     {item.text1}
                   </p>
                   {item.text2 && (
-                    <p className="max-w-[240px] text-[#868686] text-sm sm:text-base font-inter font-normal">
+                    <p className="max-w-[240px] text-[#868686] text-sm  font-inter font-normal">
                       {item.text2}
                     </p>
                   )}
