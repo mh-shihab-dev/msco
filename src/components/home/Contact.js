@@ -66,7 +66,7 @@ const Contact = () => {
             <button
               type="submit"
               className="w-full py-3 px-10 relative inline-flex items-center justify-center overflow-hidden font-medium font-inter 
-             text-white bg-secondary rounded-full 
+             text-white bg-[#b68c5a] rounded-full 
              group transition-all duration-300 ease-in-out cursor-pointer"
             >
               <span
@@ -98,27 +98,22 @@ const Contact = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ delay: i * 0.15 }}
-                className="flex items-center gap-4 group" // group এখানে
+                className="flex items-center gap-4 group"
               >
-                <div className="w-12 h-12 bg-[#264646] rounded-full flex items-center justify-center flex-shrink-0">
-                  <Image
-                    src={item.icon}
-                    width={18}
-                    alt={item.title}
-                    className="transition-transform duration-500 group-hover:scale-x-[-1]" // group-hover এখানে
-                  />
+                <div className="w-12 h-12 bg-[#264646] rounded-full flex items-center justify-center flex-shrink-0 ">
+                  <Image src={item.icon} width={18} alt={item.title} className="transition-transform duration-500 group-hover:scale-x-[-1]" />
                 </div>
                 <div>
-                 <h4 className="text-white text-lg sm:text-xl font-bold">
-            {item.title}
-          </h4>
-          <p className="max-w-[240px] text-[#868686] text-sm font-inter font-normal hover:text-secondary transition-colors duration-300 cursor-pointer">
-            {item.text1}
-          </p>
-          {item.text2 && (
-            <p className="max-w-[240px] text-[#868686] text-sm font-inter font-normal hover:text-secondary transition-colors duration-300 cursor-pointer">
-              {item.text2}
-            </p>
+                  <h4 className="text-secondary text-lg sm:text-xl font-semibold">
+                    {item.title}
+                  </h4>
+                  <p className="max-w-[240px] text-[#868686] text-sm sm:text-base font-inter font-normal hover:text-secondary transition-colors duration-300 cursor-pointer">
+                    {item.text1}
+                  </p>
+                  {item.text2 && (
+                    <p className="max-w-[240px] text-[#868686] text-sm sm:text-base font-inter font-normal hover:text-secondary transition-colors duration-300 cursor-pointer">
+                      {item.text2}
+                    </p>
                   )}
                 </div>
               </motion.div>
