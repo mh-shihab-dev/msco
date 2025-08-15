@@ -65,7 +65,7 @@ export default function TestimonialS() {
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
+        viewport={{ once: true}}
       >
         <p className="section-subtitle">Client Testimonials</p>
         <h2 className="section-title">What Our Clients Say</h2>
@@ -79,7 +79,7 @@ export default function TestimonialS() {
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.1 }}
               className="p-8 py-10 border-b-[5.47px] border-b-[rgba(182,140,90,1)]
               rounded-[23.65px_49.26px_23.65px_23.65px]
               shadow-[0px_3.94px_19.70px_0px_rgba(0,0,0,0.06)]
