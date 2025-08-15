@@ -24,7 +24,11 @@ const Features = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   return (
@@ -65,16 +69,20 @@ const Features = () => {
                 >
                   {/* Dotted line */}
                   {index !== features.length - 1 && (
-                    <span className="absolute left-[16.5px] top-8 w-px h-full border-l-2 border-dotted border-[#b68c5a]"></span>
+                    <span className="absolute left-[16.5px] top-8 w-px h-full border-l-2 border-dotted border-secbg-secondary"></span>
                   )}
 
                   {/* Icon */}
-                  <span className="flex items-center justify-center w-9 h-9 bg-[#b68c5a] text-white rounded-full z-10 group">
-                    <Image src={feature.icon} alt="feature_icon"  className="transition-transform duration-500 group-hover:scale-x-[-1]" />
+                  <span className="flex items-center justify-center w-9 h-9 bg-secondary text-white rounded-full z-10 group">
+                    <Image
+                      src={feature.icon}
+                      alt="feature_icon"
+                      className="transition-transform duration-500 group-hover:scale-x-[-1]"
+                    />
                   </span>
 
                   {/* Text */}
-                  <p className="ml-4 text-lg text-[#011c1a]">{feature.text}</p>
+                  <p className="ml-4 text-lg text-primary">{feature.text}</p>
                 </motion.li>
               ))}
             </motion.ul>

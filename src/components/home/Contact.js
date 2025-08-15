@@ -31,7 +31,7 @@ const Contact = () => {
             <input
               type="text"
               placeholder="Your Name"
-              className="w-full p-3 rounded-md bg-gray-50 focus:ring-2 focus:ring-[#c39b6a] outline-none"
+              className="w-full p-3 rounded-md bg-gray-50 focus:ring-2 focus:ring-secondary outline-none"
               required
             />
 
@@ -39,13 +39,13 @@ const Contact = () => {
               <input
                 type="email"
                 placeholder="Your Email"
-                className="w-full sm:w-1/2 p-3 rounded-md bg-gray-50 focus:ring-2 focus:ring-[#c39b6a] outline-none"
+                className="w-full sm:w-1/2 p-3 rounded-md bg-gray-50 focus:ring-2 focus:ring-secondary outline-none"
                 required
               />
               <input
                 type="tel"
                 placeholder="Telephone"
-                className="w-full sm:w-1/2 p-3 rounded-md bg-gray-50 focus:ring-2 focus:ring-[#c39b6a] outline-none"
+                className="w-full sm:w-1/2 p-3 rounded-md bg-gray-50 focus:ring-2 focus:ring-secondary outline-none"
                 required
               />
             </div>
@@ -53,27 +53,27 @@ const Contact = () => {
             <input
               type="text"
               placeholder="Subject"
-              className="w-full p-3 rounded-md bg-gray-50 focus:ring-2 focus:ring-[#c39b6a] outline-none"
+              className="w-full p-3 rounded-md bg-gray-50 focus:ring-2 focus:ring-secondary outline-none"
               required
             />
 
             <textarea
               placeholder="Your message (Optional)"
               rows="4"
-              className="w-full p-3 rounded-md bg-gray-50 focus:ring-2 focus:ring-[#c39b6a] resize-none outline-none"
+              className="w-full p-3 rounded-md bg-gray-50 focus:ring-2 focus:ring-secondary resize-none outline-none"
             ></textarea>
 
             <button
               type="submit"
               className="w-full py-3 px-10 relative inline-flex items-center justify-center overflow-hidden font-medium font-inter 
-             text-white bg-[#b68c5a] rounded-full 
+             text-white bg-sectext-secondary rounded-full 
              group transition-all duration-300 ease-in-out cursor-pointer"
             >
               <span
                 className="absolute left-0 block w-full h-0 transition-all bg-white opacity-100 
                    group-hover:h-full top-1/2 group-hover:top-0 duration-500 ease"
               ></span>
-              <span className="relative group-hover:text-[#b68c5a]">
+              <span className="relative group-hover:text-secondary">
                 Submit
               </span>
             </button>
@@ -104,7 +104,7 @@ const Contact = () => {
                   <Image src={item.icon} width={18} alt={item.title} className="transition-transform duration-500 group-hover:scale-x-[-1]" />
                 </div>
                 <div>
-                  <h4 className="text-[#b68c5a] text-lg sm:text-xl font-semibold">
+                  <h4 className="text-secondary text-lg sm:text-xl font-semibold">
                     {item.title}
                   </h4>
                   <p className="max-w-[240px] text-[#868686] text-sm sm:text-base font-inter font-normal">
