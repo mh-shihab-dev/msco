@@ -19,7 +19,7 @@ const About = () => {
           className="grid grid-cols-2 gap-5"
         >
           {/* Left Big Image */}
-          <div className="relative row-span-2 border-2 rounded-l-[60px] mr-6">
+          <div className="relative row-span-2 border-2 border-primary rounded-l-[60px] mr-6">
             <Image
               src={assets.about1}
               alt="Team work"

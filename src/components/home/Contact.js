@@ -66,11 +66,11 @@ const Contact = () => {
             <button
               type="submit"
               className="w-full py-3 px-10 relative inline-flex items-center justify-center overflow-hidden font-medium font-inter 
-             text-white bg-sectext-secondary rounded-full 
+             text-white bg-secondary rounded-full 
              group transition-all duration-300 ease-in-out cursor-pointer"
             >
               <span
-                className="absolute left-0 block w-full h-0 transition-all bg-white opacity-100 
+                className="absolute  left-0 block w-full h-0 transition-all bg-white opacity-100 
                    group-hover:h-full top-1/2 group-hover:top-0 duration-500 ease"
               ></span>
               <span className="relative group-hover:text-secondary">

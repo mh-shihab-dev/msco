@@ -18,7 +18,7 @@ export default function ScrollToTopButton() {
       setIsVisible(scrollTop > 200);
     };
 
-    // প্রথমেই একবার চালানো হবে যেন reload করলে সাথে সাথেই update হয়
+    
     handleScroll();
 
     window.addEventListener("scroll", handleScroll);
@@ -34,9 +34,9 @@ export default function ScrollToTopButton() {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-50 w-14 h-14 flex items-center justify-center bg-[#011c1a] text-white rounded-full shadow-lg group"
+          className="fixed bottom-6 right-6 z-50 w-14 h-14 flex items-center justify-center bg-[#314E52] text-white rounded-full shadow-lg group"
           style={{
-            background: `conic-gradient(#b68c5a ${scrollProgress}%, #011c1a ${scrollProgress}%)`,
+            background: `conic-gradient(#b68c5a ${scrollProgress}%, #314E52 ${scrollProgress}%)`,
           }}
         >
           <span className="text-lg font-bold transition-transform duration-300 group-hover:-translate-y-1">

@@ -156,7 +156,7 @@ export default function Industries() {
                 border-b-[5.47px] border-b-[rgba(182,140,90,1)]
                 rounded-[10px_10px_23.65px_23.65px]
                 shadow-[0px_3.94px_19.7px_0px_rgba(0,0,0,0.06)]
-                bg-[rgba(255,255,255,1)] relative overflow-hidden"
+                bg-[rgba(255,255,255,1)] relative overflow-hidden hover:border-t-0 hover:border-r-0 hover:border-l-0"
                 whileHover={{ scale: 1.03 }}
                 transition={{ type: "spring", stiffness: 200, damping: 10 }}
                 variants={cardVariants}

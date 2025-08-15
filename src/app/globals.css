@@ -27,7 +27,7 @@ body {
 
 
 :root {
-  --primary: #011c1a;
+  --primary: #314E52;
   --secondary: #b68c5a;
 }
 
@@ -45,7 +45,7 @@ body {
 }
 
 .section-title{
-  @apply text-[44px] font-semibold text-[#011c1a]
+  @apply text-[44px] font-semibold text-[#314E52]
 }
 
 

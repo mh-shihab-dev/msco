@@ -9,13 +9,14 @@ const ServiceCard = ({ service }) => {
     <motion.div
       whileHover={{ scale: 1.03 }}
       transition={{ type: "spring", stiffness: 200, damping: 10 }}
-      className="max-w-md rounded-xl border border-b-0 border-gray-200 bg-white p-6 relative overflow-hidden group"
+      className="max-w-md rounded-xl border border-b-0 border-gray-200 bg-white p-6 relative overflow-hidden group 
+             hover:border-0"
       style={{
         boxShadow: "0 8px 0 #B68C5A",
       }}
     >
       {/* Background hover overlay */}
-      <div className="absolute inset-0 bg-[#011c1a] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0"></div>
+      <div className="absolute inset-0 bg-[#314E52] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0"></div>
 
       {/* Content */}
       <div className="relative z-10 space-y-6">
@@ -30,19 +31,19 @@ const ServiceCard = ({ service }) => {
         </div>
 
         {/* Title */}
-        <h2 className="text-[28px] font-bold text-[#011c1a] group-hover:text-white transition-colors duration-500">
+        <h2 className="text-[28px] font-bold text-[#314E52] group-hover:text-white transition-colors duration-500">
           {title}
         </h2>
 
         {/* Description */}
-        <p className="text-[#011c1a] font-inter text-lg group-hover:text-gray-200 transition-colors duration-500">
+        <p className="text-[#314E52] font-inter text-lg group-hover:text-gray-200 transition-colors duration-500">
           {description}
         </p>
 
         {/* Read More */}
         <a
           href="#"
-          className="inline-flex items-center text-sm font-semibold text-[#011c1a] font-inter group-hover:text-white transition-colors duration-500"
+          className="inline-flex items-center text-sm font-semibold text-[#314E52] font-inter group-hover:text-white transition-colors duration-500"
         >
           Read More{" "}
           <svg

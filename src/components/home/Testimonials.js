@@ -91,7 +91,7 @@ export default function TestimonialS() {
                   className="w-[75px] h-[75px] flex items-center justify-center 
                   rounded-bl-[35px] relative
                   transition-colors duration-700 ease-in-out
-                  group-hover:bg-[#011c1a]"
+                  group-hover:bg-[#314E52]"
                 >
                   {/* Dark Icon - default */}
                   <Image
@@ -119,7 +119,7 @@ export default function TestimonialS() {
                   className="rounded-full object-cover"
                 />
                 <div>
-                  <h3 className="text-[#011c1a] text-[21px] font-semibold transition-colors duration-500 ease-in-out">
+                  <h3 className="text-[#314E52] text-[21px] font-semibold transition-colors duration-500 ease-in-out">
                     {item.name}
                   </h3>
                   <p className="text-[#868686] font-base font-inter transition-colors duration-500 ease-in-out">
@@ -144,7 +144,7 @@ export default function TestimonialS() {
           onClick={() => sliderRef.current.slickPrev()}
           className="relative overflow-hidden group bg-[#b98a57] text-white w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out cursor-pointer"
         >
-          <span className="absolute left-0 block w-full h-0 transition-all bg-[#011c1a] opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-500 ease"></span>
+          <span className="absolute left-0 block w-full h-0 transition-all bg-[#314E52] opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-500 ease"></span>
           <svg
             className="w-5 h-5 z-10"
             fill="none"
@@ -163,7 +163,7 @@ export default function TestimonialS() {
           onClick={() => sliderRef.current.slickNext()}
           className="relative overflow-hidden group bg-[#b98a57] text-white w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out cursor-pointer"
         >
-          <span className="absolute left-0 block w-full h-0 transition-all bg-[#011c1a] opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-500 ease"></span>
+          <span className="absolute left-0 block w-full h-0 transition-all bg-[#314E52] opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-500 ease"></span>
           <svg
             className="w-5 h-5 z-10"
             fill="none"
