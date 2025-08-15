@@ -69,7 +69,7 @@ const Features = () => {
                 >
                   {/* Dotted line */}
                   {index !== features.length - 1 && (
-                    <span className="absolute left-[16.5px] top-8 w-px h-full border-l-2 border-dotted border-secbg-secondary"></span>
+                    <span className="absolute left-[16.5px] top-8 w-px h-full border-l-2 border-dotted border-secondary"></span>
                   )}
 
                   {/* Icon */}
