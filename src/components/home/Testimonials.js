@@ -34,121 +34,117 @@ export default function TestimonialS() {
 
   const settings = {
     infinite: true,
-    speed: 500,
+    speed: 800,
+    cssEase: "ease-in-out",
     slidesToShow: 2,
     slidesToScroll: 1,
-    infinite: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 3500,
     pauseOnHover: false,
+    rtl: false,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
       { breakpoint: 750, settings: { slidesToShow: 1 } },
     ],
   };
 
-  // Animation Variants
-  const listVariants = {
-    hidden: {},
-    visible: {
-      transition: { staggerChildren: 0.3 },
-    },
-  };
-
   const cardVariants = {
-    hidden: { opacity: 0, y: 60 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.7, ease: "easeOut" },
+      transition: { duration: 0.5, ease: "easeOut" },
     },
   };
 
   return (
-    <section className="section mx-auto py-10 relative ">
+    <section className="section mx-auto py-10 relative">
+      {/* Heading */}
       <motion.div
         className="mb-11 text-center"
-        initial={{ opacity: 0, y: -30 }}
+        initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: false, amount: 0.2 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
       >
         <p className="section-subtitle">Client Testimonials</p>
         <h2 className="section-title">What Our Clients Say</h2>
       </motion.div>
 
-      <motion.div
-        variants={listVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.2 }}
-      >
-        <Slider ref={sliderRef} {...settings}>
-          {testimonials.map((item, i) => (
-            <motion.div key={i} className="px-3" variants={cardVariants}>
-              <motion.div
-                className=" p-8  py-10 box-border
-  border-b-[5.4734735489px] border-b-[rgba(182,140,90,1)]
-  rounded-[23.65px_49.26px_23.65px_23.65px]
-  shadow-[0px_3.9408977032px_19.7044887543px_0px_rgba(0,0,0,0.06)]
-  bg-[rgba(255,255,255,1)] relative overflow-hidden group"
-                whileHover={{ scale: 1.03 }}
-                transition={{ type: "spring", stiffness: 200, damping: 15 }}
-              >
-                {/* Background overlay */}
-                <div className="absolute inset-0 bg-[#011c1a] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0"></div>
-
-                {/* Quote Icons */}
-                <div className="absolute top-4 right-4 z-10">
+      {/* Slider */}
+      <Slider ref={sliderRef} {...settings}>
+        {testimonials.map((item, i) => (
+          <div key={i} className="px-3">
+            <motion.div
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              className="p-8 py-10 border-b-[5.47px] border-b-[rgba(182,140,90,1)]
+              rounded-[23.65px_49.26px_23.65px_23.65px]
+              shadow-[0px_3.94px_19.70px_0px_rgba(0,0,0,0.06)]
+              bg-white relative overflow-hidden group"
+              // whileHover={{ scale: 1.03 }}
+              // transition={{ type: 'spring', stiffness: 200, damping: 15 }}
+            >
+              {/* Quote Icon with Custom Corner Shape */}
+              <div className="absolute top-0 right-0 z-10">
+                <div
+                  className="w-[75px] h-[75px] flex items-center justify-center 
+                  rounded-bl-[35px] relative
+                  transition-colors duration-700 ease-in-out
+                  group-hover:bg-[#011c1a]"
+                >
+                  {/* Dark Icon - default */}
                   <Image
                     src={assets.quoteDark}
                     alt="quote dark"
-                    className="transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+                    className="w-6 h-6 absolute transition-opacity duration-500 ease-in-out opacity-100 group-hover:opacity-0"
                   />
+
+                  {/* Light Icon - hover */}
                   <Image
                     src={assets.quoteLight}
                     alt="quote light"
-                    className="absolute top-0 right-0 opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100"
+                    className="w-6 h-6 absolute transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100"
                   />
                 </div>
+              </div>
 
-                {/* Profile Info */}
-                <div className="flex items-center gap-4 mb-4 relative z-10">
-                  <Image
-                    src={item.img}
-                    alt={item.name}
-                    width={60}
-                    height={60}
-                    className="rounded-full object-cover"
-                  />
-                  <div>
-                    <h3 className="text-[#011c1a] text-[21px] font-semibold transition-colors duration-500 ease-in-out group-hover:text-white">
-                      {item.name}
-                    </h3>
-                    <p className="text-[#868686] font-base font-inter transition-colors duration-500 ease-in-out group-hover:text-white">
-                      {item.role}
-                    </p>
-                    <div className="flex text-yellow-500 text-base transition-colors duration-500 ease-in-out group-hover:text-yellow-300">
-                      ★★★★★
-                    </div>
-                  </div>
+              {/* Profile Info */}
+              <div className="flex items-center gap-4 mb-4 relative z-10">
+                <Image
+                  src={item.img}
+                  alt={item.name}
+                  width={60}
+                  height={60}
+                  className="rounded-full object-cover"
+                />
+                <div>
+                  <h3 className="text-[#011c1a] text-[21px] font-semibold transition-colors duration-500 ease-in-out">
+                    {item.name}
+                  </h3>
+                  <p className="text-[#868686] font-base font-inter transition-colors duration-500 ease-in-out">
+                    {item.role}
+                  </p>
+                  <div className="flex text-yellow-500 text-base">★★★★★</div>
                 </div>
+              </div>
 
-                {/* Testimonial Text */}
-                <p className="text-base text-[#868686] font-normal font-inter leading-[24px] relative z-10 transition-colors duration-500 ease-in-out group-hover:text-white">
-                  “{item.text}”
-                </p>
-              </motion.div>
+              {/* Testimonial Text */}
+              <p className="text-base text-[#868686] font-normal font-inter leading-[24px] relative z-10 transition-colors duration-500 ease-in-out">
+                “{item.text}”
+              </p>
             </motion.div>
-          ))}
-        </Slider>
-      </motion.div>
+          </div>
+        ))}
+      </Slider>
 
       {/* Navigation buttons */}
       <div className="flex gap-6 mt-8 justify-center">
         <button
           onClick={() => sliderRef.current.slickPrev()}
-          className="custom-prev relative overflow-hidden group bg-[#b98a57] text-white w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out cursor-pointer"
+          className="relative overflow-hidden group bg-[#b98a57] text-white w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out cursor-pointer"
         >
           <span className="absolute left-0 block w-full h-0 transition-all bg-[#011c1a] opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-500 ease"></span>
           <svg
@@ -167,7 +163,7 @@ export default function TestimonialS() {
         </button>
         <button
           onClick={() => sliderRef.current.slickNext()}
-          className="custom-next relative overflow-hidden group bg-[#b98a57] text-white w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out cursor-pointer"
+          className="relative overflow-hidden group bg-[#b98a57] text-white w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out cursor-pointer"
         >
           <span className="absolute left-0 block w-full h-0 transition-all bg-[#011c1a] opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-500 ease"></span>
           <svg
