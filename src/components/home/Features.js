@@ -64,7 +64,7 @@ const Features = () => {
               {features.map((feature, index) => (
                 <motion.li
                   key={index}
-                  className="flex items-center mb-6 last:mb-0 font-inter relative"
+                  className="flex items-center mb-6 last:mb-0 font-inter relative group" // group এখানে
                   variants={itemVariants}
                 >
                   {/* Dotted line */}
@@ -73,11 +73,11 @@ const Features = () => {
                   )}
 
                   {/* Icon */}
-                  <span className="flex items-center justify-center w-9 h-9 bg-secondary text-white rounded-full z-10 group">
+                  <span className="flex items-center justify-center w-9 h-9 bg-secondary text-white rounded-full z-10">
                     <Image
                       src={feature.icon}
                       alt="feature_icon"
-                      className="transition-transform duration-500 group-hover:scale-x-[-1]"
+                      className="transition-transform duration-500 group-hover:scale-x-[-1]" // group-hover এখানেই কাজ করবে
                     />
                   </span>
 
