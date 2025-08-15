@@ -124,7 +124,7 @@ export default function Industries() {
   // react-slick settings (no arrows inside slider)
   const settings = {
     dots: false,
-    arrows: false, // ❌ hide built-in arrows
+    arrows: false, 
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -162,7 +162,7 @@ export default function Industries() {
                 variants={cardVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.3 }}
               >
                 <div className="absolute inset-0 bg-[#011c1a] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0"></div>
                 <h2 className="relative z-10 text-[28px] font-bold text-[#011c1a] text-center group-hover:text-white transition-colors duration-500">
