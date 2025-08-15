@@ -45,3 +45,25 @@ export const services = [
         lightIcon : assets.vatLight
     }
 ]
+
+
+// contact info
+export const contactInfo = [
+  {
+    icon: assets.location,
+    title: "Location",
+    text1: "Bank House, 209 Merton Road, London, SW19 1EE",
+    text2: "Suda House,100 Mile End Road, London, E1 4UN",
+  },
+  {
+    icon: assets.phone,
+    title: "Phone",
+    text1: "0208 543 9128",
+    text2: "0207 790 0793",
+  },
+  {
+    icon: assets.mail,
+    title: "Email",
+    text1: "info@msaccountants.co.uk",
+  },
+];

@@ -2,6 +2,7 @@ import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/common/Navbar/Navbar";
 import Footer from "@/components/common/Footer/Footer";
+import ScrollToTopButton from "@/components/common/ScrollTop/ScrollTop";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -28,7 +29,8 @@ export default function RootLayout({ children }) {
       <body className={`${playfair.variable} ${inter.variable} antialiased`}>
         <Navbar/>
         <main>{children}</main>
-        {/* <Footer/> */}
+        <ScrollToTopButton/>
+        <Footer/>
       </body>
     </html>
   );

@@ -2,31 +2,12 @@
 import Image from "next/image";
 import { assets } from "@/assets/assets";
 import { motion } from "framer-motion";
+import { contactInfo } from "@/data/Data";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
-
-export const contactInfo = [
-  {
-    icon: assets.location,
-    title: "Location",
-    text1: "Bank House, 209 Merton Road, London, SW19 1EE",
-    text2: "Suda House,100 Mile End Road, London, E1 4UN",
-  },
-  {
-    icon: assets.phone,
-    title: "Phone",
-    text1: "0208 543 9128",
-    text2: "0207 790 0793",
-  },
-  {
-    icon: assets.mail,
-    title: "Email",
-    text1: "info@msaccountants.co.uk",
-  },
-];
 const Contact = () => {
   return (
     <section className="section mb-20 px-4 sm:px-6 lg:px-8">
@@ -36,7 +17,7 @@ const Contact = () => {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="bg-[#264646] py-10 px-6 sm:px-8 lg:px-12 rounded-2xl shadow-lg w-full"
         >
           <h3 className="text-[rgba(182,140,90,1)] text-lg sm:text-xl text-center font-normal mb-4">
@@ -104,7 +85,7 @@ const Contact = () => {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ delay: 0.2 }}
           className="space-y-6"
         >
@@ -115,7 +96,7 @@ const Contact = () => {
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ delay: i * 0.15 }}
                 className="flex items-center gap-4"
               >
@@ -144,7 +125,7 @@ const Contact = () => {
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ delay: 0.4 }}
             className="relative w-full"
           >

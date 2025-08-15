@@ -10,6 +10,7 @@ import clinet2 from "../../public/images/client-2.png"
 import client3 from "../../public/images/client-3.webp"
 import contactBg from "../../public/images/home/contact-bg.png"
 import contactPerson from "../../public/images/home/contact-person.svg"
+import accaFooter from "../../public/images/acca-footer.png"
 
 
 
@@ -26,5 +27,6 @@ export const assets = {
     clinet2,
     client3,
     contactBg,
-    contactPerson
+    contactPerson,
+    accaFooter
 }

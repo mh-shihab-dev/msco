@@ -1,12 +1,13 @@
 import { assets } from "@/assets/assets";
+import { contactInfo } from "@/data/Data";
 import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#011c1a] py-12">
-      <div className="w-[90%] max-w-[1300px] mx-auto">
+    <footer className="bg-[#011c1a] py-16">
+      <div className="w-[90%] max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[0.6fr_1fr_1.5fr_1.1fr] gap-10 relative">
         {/* Pages */}
-        <div>
+        <div className="relative">
           <h3 className="font-semibold text-xl text-white mb-4">Pages</h3>
           <ul className="space-y-2 text-[#99a4a3] font-inter">
             <li>Home</li>
@@ -15,13 +16,15 @@ const Footer = () => {
             <li>Why Choose Us</li>
             <li>Contact</li>
           </ul>
+          <div className="hidden lg:block absolute top-0 right-0 w-px h-[85%] bg-[#264646]"></div>
         </div>
+
         {/* Our Services */}
-        <div>
+        <div className="relative">
           <h3 className="font-semibold text-xl text-white mb-4">
             Our Services
           </h3>
-          <ul className="space-y-2 text-[#99a4a3] font-inter">
+          <ul className="space-y-3 text-[#99a4a3] text-base font-inter">
             <li>Business Startups</li>
             <li>Company Formation</li>
             <li>Company Secretarial Services</li>
@@ -33,26 +36,120 @@ const Footer = () => {
             <li>Tax Planning & Returns</li>
             <li>Inheritance Tax (IHT)</li>
           </ul>
+          <div className="hidden lg:block absolute top-0 -right-2 w-px h-[85%] bg-[#264646]"></div>
         </div>
-        {/* Center Logo & Description */}
-        <div className="text-center md:text-left">
-          <Image src={assets.mscoLight} alt="msco-logo" />
-          <p className="text-gray-300 text-sm">
+
+        {/* Logo & Description */}
+        <div className="relative px-4 text-left md:text-center space-y-[22px]">
+          <Image
+            src={assets.mscoLight}
+            alt="msco-logo"
+            className="mx-0 md:mx-auto"
+          />
+          <p className="text-gray-300 text-base leading-[26px] font-inter">
             MSCO Accountants is a trusted firm offering expert services in tax,
             bookkeeping, payroll, and business advisory—helping clients stay
             compliant and grow with confidence.
           </p>
-          <div className="flex items-center justify-center md:justify-start gap-4 mt-4">
-            {/* <img src="/acca.png" alt="ACCA" className="h-10" />
-            <img src="/icaew.png" alt="ICAEW" className="h-10" /> */}
+          <Image src={assets.accaFooter} alt="footer-img" />
+          <div className="flex gap-4 bg-[#011c1a] p-6 justify-center">
+            {/* Facebook */}
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group w-12 h-12 rounded-full bg-[#0d2c28] flex items-center justify-center hover:bg-[#b68c5a] transition-colors duration-300 cursor-pointer"
+            >
+              <Image
+                src={assets.fb}
+                alt="Facebook"
+                width={20}
+                height={20}
+                className="group-hover:scale-110 transition-transform duration-300"
+              />
+            </a>
+
+            {/* Twitter */}
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group w-12 h-12 rounded-full bg-[#0d2c28] flex items-center justify-center hover:bg-[#b68c5a] transition-colors duration-300 cursor-pointer"
+            >
+              <Image
+                src={assets.twitter}
+                alt="Twitter"
+                width={20}
+                height={20}
+                className="group-hover:scale-110 transition-transform duration-300"
+              />
+            </a>
+
+            {/* Instagram */}
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group w-12 h-12 rounded-full bg-[#0d2c28] flex items-center justify-center hover:bg-[#b68c5a] transition-colors duration-300 cursor-pointer"
+            >
+              <Image
+                src={assets.insta}
+                alt="Instagram"
+                width={20}
+                height={20}
+                className="group-hover:scale-110 transition-transform duration-300"
+              />
+            </a>
+
+            {/* LinkedIn */}
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group w-12 h-12 rounded-full bg-[#0d2c28] flex items-center justify-center hover:bg-[#b68c5a] transition-colors duration-300 cursor-pointer"
+            >
+              <Image
+                src={assets.linkedin}
+                alt="LinkedIn"
+                width={20}
+                height={20}
+                className="group-hover:scale-110 transition-transform duration-300"
+              />
+            </a>
           </div>
-          <div className="flex gap-3 justify-center md:justify-start mt-4"></div>
+          <div className="hidden lg:block absolute top-0 -right-3 w-px h-[85%] bg-[#264646]"></div>
         </div>
-          {/* Location & Contact */}
-          <div>
-            
+
+        {/* Location & Contact */}
+        <div>
+          <div className="space-y-6">
+            {contactInfo.map((item, i) => (
+              <div key={i} className="flex gap-4 items-start">
+                <div className="w-12 h-12 bg-[#314e52] mt-2 rounded-full flex items-center justify-center flex-shrink-0 group p-4 shadow-lg">
+                  <Image
+                    src={item.icon}
+                    width={18}
+                    alt={item.title}
+                    className="transition-transform duration-500 group-hover:scale-x-[-1]"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <h4 className="text-white text-lg sm:text-xl font-semibold">
+                    {item.title}
+                  </h4>
+                  <p className="max-w-[240px] text-[#868686] text-sm sm:text-base font-inter font-normal">
+                    {item.text1}
+                  </p>
+                  {item.text2 && (
+                    <p className="max-w-[240px] text-[#868686] text-sm sm:text-base font-inter font-normal">
+                      {item.text2}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
-         
+        </div>
       </div>
     </footer>
   );

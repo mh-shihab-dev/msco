@@ -1,10 +1,11 @@
 import phone from "../../public/images/icons/phone.png"
 import mail from "../../public/images/icons/mail.png"
 import location from "../../public/images/icons/location.png"
-import fb from "../../public/images/icons/fb.png"
-import twitter from "../../public/images/icons/twitter.png"
-import youtube from "../../public/images/icons/youtube.png"
-import linkedin from "../../public/images/icons/linkedin.png"
+import fb from "../../public/images/icons/fb.svg"
+import twitter from "../../public/images/icons/twitter.svg"
+import youtube from "../../public/images/icons/youtube.svg"
+import linkedin from "../../public/images/icons/linkedin.svg"
+import insta from "../../public/images/icons/insta.svg"
 import established from "../../public/images/icons/established.svg"
 import excellence from "../../public/images/icons/excellence.svg"
 import clients from "../../public/images/icons/clients.svg"
@@ -42,6 +43,7 @@ export const icons = {
     twitter,
     youtube,
     linkedin,
+    insta,
     established,
     excellence,
     clients,

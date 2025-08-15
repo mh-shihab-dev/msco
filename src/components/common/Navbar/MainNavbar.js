@@ -1,4 +1,5 @@
 "use client";
+import { PrimaryDarkBtn } from "@/components/shared/Button";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -18,7 +19,7 @@ export default function MainNavbar() {
 
   return (
     <nav className=" bg-white shadow">
-      <div className="py-4 px-12">
+      <div className="py-[18px] px-12 flex justify-between items-center">
         <ul className="flex space-x-8 text-gray-800 font-medium">
           {menuItems.map((item, idx) => (
             <li
@@ -69,6 +70,9 @@ export default function MainNavbar() {
             </li>
           ))}
         </ul>
+        <div>
+          <PrimaryDarkBtn text={"Book Consultation"}/>
+        </div>
       </div>
     </nav>
   );
