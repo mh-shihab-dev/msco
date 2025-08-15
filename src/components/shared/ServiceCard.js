@@ -15,12 +15,12 @@ const ServiceCard = ({ service }) => {
       }}
     >
       {/* Background hover overlay */}
-      <div className="absolute inset-0 bg-[#011c1a] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0"></div>
+      <div className="absolute inset-0 bg-primtext-primary translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0"></div>
 
       {/* Content */}
       <div className="relative z-10 space-y-6">
         {/* Icon */}
-        <div className="w-14 h-14 rounded-full bg-[#FAF7F2] group-hover:bg-[#B68C5A] flex items-center justify-center mb-4 transition-colors duration-500">
+        <div className="w-14 h-14 rounded-full bg-[#FAF7F2] group-hover:bg-secondary flex items-center justify-center mb-4 transition-colors duration-500">
           <Image src={darkIcon} alt="" className="group-hover:hidden" />
           <Image
             src={lightIcon}
@@ -30,19 +30,19 @@ const ServiceCard = ({ service }) => {
         </div>
 
         {/* Title */}
-        <h2 className="text-[28px] font-bold text-[#011c1a] group-hover:text-white transition-colors duration-500">
+        <h2 className="text-[28px] font-bold text-primary group-hover:text-white transition-colors duration-500">
           {title}
         </h2>
 
         {/* Description */}
-        <p className="text-[#011c1a] font-inter text-lg group-hover:text-gray-200 transition-colors duration-500">
+        <p className="text-primary font-inter text-lg group-hover:text-gray-200 transition-colors duration-500">
           {description}
         </p>
 
         {/* Read More */}
         <a
           href="#"
-          className="inline-flex items-center text-sm font-semibold text-[#011c1a] font-inter group-hover:text-white transition-colors duration-500"
+          className="inline-flex items-center text-sm font-semibold text-primary font-inter group-hover:text-white transition-colors duration-500"
         >
           Read More{" "}
           <svg

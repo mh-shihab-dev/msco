@@ -64,9 +64,9 @@
 //                 viewport={{ once: false, amount: 0.3 }} 
 //               >
 //                 {/* Background hover overlay */}
-//                 <div className="absolute inset-0 bg-[#011c1a] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0"></div>
+//                 <div className="absolute inset-0 bg-primary translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0"></div>
 
-//                 <h2 className="relative z-10 text-[28px] font-bold text-[#011c1a] text-center group-hover:text-white transition-colors duration-500">
+//                 <h2 className="relative z-10 text-[28px] font-bold text-pribg-primary text-center group-hover:text-white transition-colors duration-500">
 //                   {item.title} <br />
 //                   {item.subtitle}
 //                 </h2>
@@ -77,14 +77,14 @@
 
 //         {/* Navigation buttons */}
 //         <div className="flex gap-6 mt-8">
-//           <button className="custom-prev relative overflow-hidden group bg-[#b98a57] text-white w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out cursor-pointer">
-//             <span className="absolute left-0 block w-full h-0 transition-all bg-[#011c1a] opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-500 ease"></span>
+//           <button className="custom-prev relative overflow-hidden group bg-secondary text-white w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out cursor-pointer">
+//             <span className="absolute left-0 block w-full h-0 transition-all bg-primary opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-500 ease"></span>
 //             <svg className="w-5 h-5 z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 //               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
 //             </svg>
 //           </button>
-//           <button className="custom-next relative overflow-hidden group bg-[#b98a57] text-white w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out cursor-pointer">
-//             <span className="absolute left-0 block w-full h-0 transition-all bg-[#011c1a] opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-500 ease"></span>
+//           <button className="custom-next relative overflow-hidden group bg-secondary text-white w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out cursor-pointer">
+//             <span className="absolute left-0 block w-full h-0 transition-all bg-primary opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-500 ease"></span>
 //             <svg className="w-5 h-5 z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 //               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
 //             </svg>
@@ -154,7 +154,7 @@ export default function Industries() {
               <motion.div
                 className="border border-gray-200 py-10 group transition-colors duration-500 box-border
                 border-b-[5.47px] border-b-[rgba(182,140,90,1)]
-                rounded-[10px]
+                rounded-[10px_10px_23.65px_23.65px]
                 shadow-[0px_3.94px_19.7px_0px_rgba(0,0,0,0.06)]
                 bg-[rgba(255,255,255,1)] relative overflow-hidden"
                 whileHover={{ scale: 1.03 }}
@@ -164,8 +164,8 @@ export default function Industries() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.1 }}
               >
-                <div className="absolute inset-0 bg-[#011c1a] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0"></div>
-                <h2 className="relative z-10 text-[28px] font-bold text-[#011c1a] text-center group-hover:text-white transition-colors duration-500">
+                <div className="absolute inset-0 bg-primary translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0"></div>
+                <h2 className="relative z-10 text-[28px] font-bold text-pribg-primary text-center group-hover:text-white transition-colors duration-500">
                   {item.title} <br /> {item.subtitle}
                 </h2>
               </motion.div>
@@ -177,18 +177,18 @@ export default function Industries() {
         <div className="flex gap-6 mt-8">
           <button
             onClick={() => sliderRef.current.slickPrev()}
-            className="relative overflow-hidden group bg-[#b98a57] text-white w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out cursor-pointer"
+            className="relative overflow-hidden group bg-secondary text-white w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out cursor-pointer"
           >
-            <span className="absolute left-0 block w-full h-0 transition-all bg-[#011c1a] opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-500 ease"></span>
+            <span className="absolute left-0 block w-full h-0 transition-all bg-primary opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-500 ease"></span>
             <svg className="w-5 h-5 z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
             </svg>
           </button>
           <button
             onClick={() => sliderRef.current.slickNext()}
-            className="relative overflow-hidden group bg-[#b98a57] text-white w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out cursor-pointer"
+            className="relative overflow-hidden group bg-secondary text-white w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out cursor-pointer"
           >
-            <span className="absolute left-0 block w-full h-0 transition-all bg-[#011c1a] opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-500 ease"></span>
+            <span className="absolute left-0 block w-full h-0 transition-all bg-primary opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-500 ease"></span>
             <svg className="w-5 h-5 z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
             </svg>

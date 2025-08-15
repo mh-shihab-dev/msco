@@ -20,7 +20,7 @@ const Achivement = () => {
 
   return (
     <div
-      className="mt-22 w-[76%] max-w-[1100px] mx-auto bg-[#b68c5a] rounded-[10px] text-white font-inter"
+      className="mt-22 w-[76%] max-w-[1100px] mx-auto bg-secondary rounded-[10px] text-white font-inter"
     >
       <div className="py-8 px-12 flex flex-col items-center sm:grid sm:grid-cols-2 lg:flex lg:flex-row lg:justify-between gap-10">
         

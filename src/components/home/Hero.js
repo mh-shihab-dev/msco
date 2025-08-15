@@ -87,7 +87,7 @@ const Hero = () => {
             >
               {/* Hover fill effect (primary color) */}
               <span
-                className="absolute left-0 block w-full h-0 transition-all bg-[#B68C5A] opacity-100 
+                className="absolute left-0 block w-full h-0 transition-all bg-secondary opacity-100 
                group-hover:h-full top-1/2 group-hover:top-0 duration-500 ease"
               ></span>
 

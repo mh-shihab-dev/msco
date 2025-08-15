@@ -50,7 +50,7 @@ const About = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-4 leading-14">
             MOHAMMAD SHAH & CO. LLP – Chartered Accountants
           </h2>
-          <p className="text-[#011c1a] text-lg leading-relaxed mb-6 font-inter">
+          <p className="text-primary text-lg leading-relaxed mb-6 font-inter">
             At Mohammad Shah & Co. LLP, we bring over three decades of
             experience in delivering trusted, high-quality accounting and
             advisory services to individuals, startups, and established
