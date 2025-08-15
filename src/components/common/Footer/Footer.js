@@ -51,7 +51,7 @@ const Footer = () => {
             bookkeeping, payroll, and business advisory—helping clients stay
             compliant and grow with confidence.
           </p>
-          <Image src={assets.accaFooter} alt="footer-img" />
+          <Image src={assets.accaFooter} alt="footer-img" className="mx-auto" />
           <div className="flex gap-4 bg-[#011c1a] p-6 justify-center">
             {/* Facebook */}
             <a
