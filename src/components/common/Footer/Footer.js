@@ -58,7 +58,7 @@ const Footer = () => {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="group w-12 h-12 rounded-full bg-[#0d2c28] flex items-center justify-center hover:bg-[#b68c5a] transition-colors duration-300 cursor-pointer"
+              className="group w-10 h-10 rounded-full bg-[#0d2c28] flex items-center justify-center hover:bg-[#b68c5a] transition-colors duration-300 cursor-pointer"
             >
               <Image
                 src={assets.fb}
@@ -74,7 +74,7 @@ const Footer = () => {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="group w-12 h-12 rounded-full bg-[#0d2c28] flex items-center justify-center hover:bg-[#b68c5a] transition-colors duration-300 cursor-pointer"
+              className="group w-10 h-10 rounded-full bg-[#0d2c28] flex items-center justify-center hover:bg-[#b68c5a] transition-colors duration-300 cursor-pointer"
             >
               <Image
                 src={assets.twitter}
@@ -90,7 +90,7 @@ const Footer = () => {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="group w-12 h-12 rounded-full bg-[#0d2c28] flex items-center justify-center hover:bg-[#b68c5a] transition-colors duration-300 cursor-pointer"
+              className="group w-10 h-10 rounded-full bg-[#0d2c28] flex items-center justify-center hover:bg-[#b68c5a] transition-colors duration-300 cursor-pointer"
             >
               <Image
                 src={assets.insta}
@@ -106,7 +106,7 @@ const Footer = () => {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="group w-12 h-12 rounded-full bg-[#0d2c28] flex items-center justify-center hover:bg-[#b68c5a] transition-colors duration-300 cursor-pointer"
+              className="group w-10 h-10 rounded-full bg-[#0d2c28] flex items-center justify-center hover:bg-[#b68c5a] transition-colors duration-300 cursor-pointer"
             >
               <Image
                 src={assets.linkedin}
