@@ -34,7 +34,6 @@ body {
 
 
 .input-style{
-  background: radial-gradient(243.00% 43.00% at 79% 50%,rgba(0, 61, 64, 0.5),rgba(1, 28, 26, 0.5) 100%);
-  backdrop-filter: blur(100px);
-  @apply box-border p-3  border border-white/40 rounded-md  text-white placeholder-[#ffffffbd] font-inter text-xs focus:outline-none focus:border-white
+  background: linear-gradient(243deg, rgba(0,61,64,0.5), rgba(1,28,26,0.5) 100%);
+  @apply box-border p-3   border border-white/40 rounded-md  text-white placeholder-[#ffffffbd] font-inter text-xs focus:outline-none focus:border-white
 }

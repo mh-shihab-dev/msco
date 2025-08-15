@@ -44,7 +44,7 @@ const Hero = () => {
               placeholder="Your Name"
               className="w-full  input-style"
               required
-            />
+              />
 
             {/* Email + Telephone */}
             <div className="flex gap-2">
