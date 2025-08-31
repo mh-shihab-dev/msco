@@ -7,14 +7,52 @@ export default function MainNavbar() {
   const [openMenu, setOpenMenu] = useState(null);
 
   const menuItems = [
-    { name: "Home", links: ["Home 1", "Home 2", "Home 3"] },
-    { name: "About", links: ["Our Story", "Team", "Careers"] },
-    {
-      name: "Services",
-      links: ["Business Startups", "Company Formation", "Accounts Preparation"],
+    { 
+      name: "Home", 
+      slug:"/",
+      subMenu: [
+        {name:"Home1", slug:"/"},
+        {name:"Home2", slug:"/"},
+        {name:"Home3", slug:"/"}
+      ]
     },
-    { name: "Why Choose Us", links: ["Quality", "Experience", "Support"] },
-    { name: "Contact", links: ["Email", "Phone", "Location"] },
+    { 
+      name: "About",
+      slug: "/about",
+      subMenu: [
+        {name:"Our Story", slug:"/about"},
+        {name:"Team", slug:"/about"},
+        {name:"Careers", slug:"/about"}
+      ]
+    },
+    { 
+      name: "Services",
+      slug: "/services",
+      subMenu: [
+        {name:"Business Startups", slug:"/services"},
+        {name:"Company Formation", slug:"/services"},
+        {name:"Accounts Preparation", slug:"/services"}
+      ]
+    },
+    { 
+      name: "Why Choose Us",
+      slug: "/why-choose-us",
+      subMenu: [
+        {name:"Quality", slug:"/services"},
+        {name:"Experience", slug:"/services"},
+        {name:"Support", slug:"/services"}
+      ]
+    },
+    
+    { 
+      name: "Contact",
+      slug: "/contact",
+      subMenu: [
+        {name:"Email", slug:"/services"},
+        {name:"Phone", slug:"/services"},
+        {name:"Location", slug:"/services"}
+      ]
+    },
   ];
 
   return (
@@ -30,7 +68,7 @@ export default function MainNavbar() {
             >
               {/* Menu button */}
               <Link
-                href={"/"}
+                href={item.slug}
                 className="flex items-center gap-1 hover:text-secondary transition-colors"
               >
                 {item.name}
@@ -59,10 +97,10 @@ export default function MainNavbar() {
                     : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
                 }`}
               >
-                {item.links.map((link, linkIdx) => (
+                {item.subMenu.map((link, linkIdx) => (
                   <li key={linkIdx}>
                     <a href="#" className="block px-4 py-2  hover:text-secondary transition-colors">
-                      {link}
+                      {link.name}
                     </a>
                   </li>
                 ))}

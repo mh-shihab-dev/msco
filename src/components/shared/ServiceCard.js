@@ -1,9 +1,10 @@
 // ServiceCard.jsx
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const ServiceCard = ({ service }) => {
-  const { title, description, darkIcon, lightIcon } = service || {};
+  const { title, slug, intro, darkIcon, lightIcon } = service || {};
 
   return (
     <motion.div
@@ -16,7 +17,7 @@ const ServiceCard = ({ service }) => {
       }}
     >
       {/* Background hover overlay */}
-      <div className="absolute inset-0 bg-[#314E52] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0"></div>
+      <div className="absolute inset-0 bg-primary translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0"></div>
 
       {/* Content */}
       <div className="relative z-10 space-y-6">
@@ -31,19 +32,19 @@ const ServiceCard = ({ service }) => {
         </div>
 
         {/* Title */}
-        <h2 className="text-[28px] font-bold text-[#314E52] group-hover:text-white transition-colors duration-500">
+        <h2 className="text-[28px] font-bold text-primary group-hover:text-white transition-colors duration-500">
           {title}
         </h2>
 
         {/* Description */}
-        <p className="text-[#314E52] font-inter text-lg group-hover:text-gray-200 transition-colors duration-500">
-          {description}
+        <p className="text-primary font-inter text-lg group-hover:text-gray-200 transition-colors duration-500">
+          {intro.description.slice(0,65)}...
         </p>
 
         {/* Read More */}
-        <a
-          href="#"
-          className="inline-flex items-center text-sm font-semibold text-[#314E52] font-inter group-hover:text-white transition-colors duration-500"
+        <Link
+          href={`/services/${slug}`}
+          className="inline-flex items-center text-sm font-semibold text-primary font-inter group-hover:text-white transition-colors duration-500"
         >
           Read More{" "}
           <svg
@@ -59,7 +60,7 @@ const ServiceCard = ({ service }) => {
               d="M14 5l7 7m0 0l-7 7m7-7H3"
             ></path>
           </svg>
-        </a>
+        </Link>
       </div>
     </motion.div>
   );

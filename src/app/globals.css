@@ -4,19 +4,26 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: #314e52;
+  --color-secondary: #b68c5a;
+  --color-base-text: rgba(1, 28, 26, 1);
 }
 
 @theme {
   --font-playfair: var(--font-playfair), serif;
   --font-inter: var(--font-inter), sans-serif;
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-base-text: var(--color-base-text)
 }
+
+
 
 /* globals.css */
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
-
 
 /* Default body font */
 body {
@@ -26,30 +33,23 @@ body {
 }
 
 
-:root {
-  --primary: #314E52;
-  --secondary: #b68c5a;
+.section {
+  @apply w-[90%] max-w-[1300px] mx-auto mt-26;
 }
 
-@theme {
-  --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
+.section-subtitle {
+  @apply text-[#b68c5a] text-xl font-semibold;
 }
 
-.section{
-  @apply w-[90%] max-w-[1300px] mx-auto mt-26
+.section-title {
+  @apply text-[44px] font-semibold text-[#314E52];
 }
 
-.section-subtitle{
-  @apply text-[#b68c5a] text-xl font-semibold
-}
-
-.section-title{
-  @apply text-[44px] font-semibold text-[#314E52]
-}
-
-
-.input-style{
-  background: linear-gradient(243deg, rgba(0,61,64,0.5), rgba(1,28,26,0.5) 100%);
-  @apply box-border p-3   border border-white/40 rounded-md  text-white placeholder-[#ffffffbd] font-inter text-xs focus:outline-none focus:border-white
+.input-style {
+  background: linear-gradient(
+    243deg,
+    rgba(0, 61, 64, 0.5),
+    rgba(1, 28, 26, 0.5) 100%
+  );
+  @apply box-border p-3   border border-white/40 rounded-md  text-white placeholder-[#ffffffbd] font-inter text-xs focus:outline-none focus:border-white;
 }

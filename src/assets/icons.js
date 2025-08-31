@@ -28,6 +28,7 @@ import clarification from "../../public/images/icons/features/clarification.svg"
 import approach from "../../public/images/icons/features/approach.svg"
 import quoteDark from "../../public/images/icons/quote-dark.svg"
 import quoteLight from "../../public/images/icons/quote-light.svg"
+import checkMark from "../../public/images/icons/check-mark.svg"
 
 
 
@@ -65,5 +66,6 @@ export const icons = {
     clarification,
     approach,
     quoteDark,
-    quoteLight
+    quoteLight,
+    checkMark
 };

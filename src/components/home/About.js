@@ -40,15 +40,15 @@ const About = () => {
 
         {/* Right Side - Text */}
         <motion.div
-          initial={{ opacity: 0, x: 60 }} // ডানে থেকে আসবে
+          initial={{ opacity: 0, x: 60 }} 
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }} // একটু delay
+          transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }} 
           viewport={{ once: true }}
           className="space-y-6"
         >
           <p className="section-subtitle">About Us</p>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 leading-14">
-            MOHAMMAD SHAH & CO. LLP – Chartered Accountants
+          <h2 className="text-4xl font-bold text-[#011C1A] mb-4 leading-14">
+            MOHAMMAD SHAH & CO. LLP Chartered Accountants
           </h2>
           <p className="text-primary text-lg leading-relaxed mb-6 font-inter">
             At Mohammad Shah & Co. LLP, we bring over three decades of

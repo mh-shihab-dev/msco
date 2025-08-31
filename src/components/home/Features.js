@@ -17,7 +17,7 @@ const Features = () => {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.25, // gap between animations
+        staggerChildren: 0.25, 
       },
     },
   };
@@ -39,7 +39,7 @@ const Features = () => {
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: false, amount: 0.2 }} // will trigger multiple times on scroll
+          viewport={{ once: false, amount: 0.2 }} 
         >
           <Image src={assets.feature} alt="Team" width={500} height={400} />
         </motion.div>
@@ -64,7 +64,7 @@ const Features = () => {
               {features.map((feature, index) => (
                 <motion.li
                   key={index}
-                  className="flex items-center mb-6 last:mb-0 font-inter relative group" // group এখানে
+                  className="flex items-center mb-6 last:mb-0 font-inter relative group" 
                   variants={itemVariants}
                 >
                   {/* Dotted line */}
@@ -77,7 +77,7 @@ const Features = () => {
                     <Image
                       src={feature.icon}
                       alt="feature_icon"
-                      className="transition-transform duration-500 group-hover:scale-x-[-1]" // group-hover এখানেই কাজ করবে
+                      className="transition-transform duration-500 group-hover:scale-x-[-1]" 
                     />
                   </span>
 

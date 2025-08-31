@@ -15,7 +15,7 @@ const HomePage = () => {
       <Services />
       <Industries />
       <Features />
-      <Testimonials/>
+      {/* <Testimonials/> */}
       <Contact/>
     </div>
   );

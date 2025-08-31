@@ -11,14 +11,51 @@ export default function FixedNavbar() {
   const [showNavbar, setShowNavbar] = useState(false);
 
   const menuItems = [
-    { name: "Home", links: ["Home 1", "Home 2", "Home 3"] },
-    { name: "About", links: ["Our Story", "Team", "Careers"] },
+    {
+      name: "Home",
+      slug: "/",
+      subMenu: [
+        { name: "Home1", slug: "/" },
+        { name: "Home2", slug: "/" },
+        { name: "Home3", slug: "/" },
+      ],
+    },
+    {
+      name: "About",
+      slug: "/about",
+      subMenu: [
+        { name: "Our Story", slug: "/about" },
+        { name: "Team", slug: "/about" },
+        { name: "Careers", slug: "/about" },
+      ],
+    },
     {
       name: "Services",
-      links: ["Business Startups", "Company Formation", "Accounts Preparation"],
+      slug: "/services",
+      subMenu: [
+        { name: "Business Startups", slug: "/services" },
+        { name: "Company Formation", slug: "/services" },
+        { name: "Accounts Preparation", slug: "/services" },
+      ],
     },
-    { name: "Why Choose Us", links: ["Quality", "Experience", "Support"] },
-    { name: "Contact", links: ["Email", "Phone", "Location"] },
+    {
+      name: "Why Choose Us",
+      slug: "/why-choose-us",
+      subMenu: [
+        { name: "Quality", slug: "/services" },
+        { name: "Experience", slug: "/services" },
+        { name: "Support", slug: "/services" },
+      ],
+    },
+    {
+      name: "Contact",
+      slug: "/contact",
+      subMenu: [
+        { name: "Email", slug: "/contact" },
+        { name: "Phone", slug: "/contact" },
+        { name: "Location", slug: "/contact" },
+      ],
+    },
   ];
 
   useEffect(() => {
@@ -30,7 +67,7 @@ export default function FixedNavbar() {
       }
     };
 
-    handleScroll(); // Reload এর সময়ও চেক হবে
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -44,64 +81,69 @@ export default function FixedNavbar() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -80, opacity: 0 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="fixed top-0 left-0 w-full bg-white shadow z-[999]"
+          className="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-[2px] shadow z-[999]"
         >
-          <div className="py-[18px] hidden lg:flex justify-between items-center font-inter max-w-[1360px] mx-auto px-4">
-              <Link href={"/"}>
-                <Image src={assets.mscoDark} alt="logo" />
-              </Link>
-              <ul className="flex space-x-8 text-gray-800 font-medium">
-                {menuItems.map((item, idx) => (
-                  <li
-                    key={idx}
-                    className="relative group"
-                    onMouseEnter={() => setOpenMenu(idx)}
-                    onMouseLeave={() => setOpenMenu(null)}
-                  >
-                    {/* Menu button */}
-                    <Link
-                      href={"/"}
-                      className="flex items-center gap-1 hover:text-secondary transition-colors"
-                    >
-                      {item.name}
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </Link>
+          <div className="py-2 hidden lg:flex justify-between items-center font-inter max-w-[1360px] mx-auto px-4">
+            {/* Logo */}
+            <Link href={"/"}>
+              <Image src={assets.mscoDark} alt="logo" />
+            </Link>
 
-                    {/* Dropdown */}
-                    <ul
-                      className={`absolute left-0 py-2 bg-white z-50 rounded shadow-lg w-60 transform transition-all duration-300 origin-top
-                      ${
-                        openMenu === idx
-                          ? "opacity-100 scale-100 translate-y-0"
-                          : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
-                      }`}
+            {/* Menu Items */}
+            <ul className="flex space-x-8 text-gray-800 font-medium">
+              {menuItems.map((item, idx) => (
+                <li
+                  key={idx}
+                  className="relative group"
+                  onMouseEnter={() => setOpenMenu(idx)}
+                  onMouseLeave={() => setOpenMenu(null)}
+                >
+                  {/* Parent Menu */}
+                  <Link
+                    href={item.slug}
+                    className="flex items-center gap-1 hover:text-secondary transition-colors"
+                  >
+                    {item.name}
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
                     >
-                      {item.links.map((link, linkIdx) => (
-                        <li key={linkIdx}>
-                          <a
-                            href="#"
-                            className="block px-4 py-2 hover:text-secondary transition-colors"
-                          >
-                            {link}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </li>
-                ))}
-              </ul>
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </Link>
+
+                  {/* Dropdown */}
+                  <ul
+                    className={`absolute left-0 py-2 bg-white z-50 rounded shadow-lg w-60 transform transition-all duration-300 origin-top
+                    ${
+                      openMenu === idx
+                        ? "opacity-100 scale-100 translate-y-0"
+                        : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
+                    }`}
+                  >
+                    {item?.subMenu?.map((link, linkIdx) => (
+                      <li key={linkIdx}>
+                        <Link
+                          href={link.slug}
+                          className="block px-4 py-2 hover:text-secondary transition-colors"
+                        >
+                          {link.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+
+            {/* Button */}
             <div>
               <PrimaryDarkBtn text={"Book Consultation"} />
             </div>
