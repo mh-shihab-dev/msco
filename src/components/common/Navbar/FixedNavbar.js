@@ -83,7 +83,7 @@ export default function FixedNavbar() {
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-[2px] shadow z-[999]"
         >
-          <div className="py-2 hidden lg:flex justify-between items-center font-inter max-w-[1360px] mx-auto px-4">
+          <div className="py-2.5 hidden lg:flex justify-between items-center font-inter w-[96%] max-w-[1600px] mx-auto">
             {/* Logo */}
             <Link href={"/"}>
               <Image src={assets.mscoDark} alt="logo" />

@@ -16,7 +16,7 @@ export default async function ServicePage({ params }) {
   return (
     <div className="mb-[100px]">
       {/* Hero Section */}
-      <div className="relative w-full h-[375px] md:h-[500px] lg:h-[600px]">
+      <div className="relative w-full h-[250px] md:h-[300px] lg:h-[375px]">
         <Image
           src={assets.serviceHeroBg}
           alt={service.title}
@@ -24,7 +24,7 @@ export default async function ServicePage({ params }) {
           className="object-cover"
         />
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-white text-3xl md:text-5xl font-bold">
+          <h1 className="text-white text-3xl md:text-[56px] font-bold">
             {service.title}
           </h1>
         </div>

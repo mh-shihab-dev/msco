@@ -1,9 +1,9 @@
-// Services.jsx
 "use client";
 import { services } from "@/data/Data";
 import ServiceCard from "../shared/ServiceCard";
 import { PrimaryDarkBtn } from "../shared/Button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const containerVariants = {
   hidden: {},
@@ -44,7 +44,7 @@ const Services = () => {
       </div>
 
       <div className="mt-[68px] flex justify-center">
-        <PrimaryDarkBtn text={"View All Services"} />
+        <Link href={"/services"}><PrimaryDarkBtn text={"View All Services"} /></Link>
       </div>
     </section>
   );
